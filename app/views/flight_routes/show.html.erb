@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Origin:</strong>
+  <%= @flight_route.origin %>
+</p>
+
+<p>
+  <strong>Destination:</strong>
+  <%= @flight_route.destination %>
+</p>
+
+<p>
+  <strong>Food:</strong>
+  <%= @flight_route.food %>
+</p>
+
+<%= link_to 'Edit', edit_flight_route_path(@flight_route) %> |
+<%= link_to 'Back', flight_routes_path %>
