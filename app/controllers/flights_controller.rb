@@ -25,8 +25,7 @@ class FlightsController < ApplicationController
 
   def mark_as_arrived
     @flight = Flight.find(params[:id])
-    @flight.arrived_at = Time.zone.now
-    @flight.save
+    @flight.mark_as_arrived!
 
     redirect_to flight_route_flights_path(@flight.flight_route)
   end
