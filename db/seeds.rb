@@ -1,7 +1,20 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+FlightRoute.create(origin: 'DCA', destination: 'LGA', food: true)
+FlightRoute.create(origin: 'DCA', destination: 'MDW', food: true)
+FlightRoute.create(origin: 'DCA', destination: 'LAX', food: false)
+FlightRoute.create(origin: 'DCA', destination: 'ATL', food: true)
+FlightRoute.create(origin: 'LGA', destination: 'MDW', food: true)
+FlightRoute.create(origin: 'LGA', destination: 'LAX', food: true)
+FlightRoute.create(origin: 'LGA', destination: 'ATL', food: false)
+FlightRoute.create(origin: 'MDW', destination: 'LAX', food: true)
+FlightRoute.create(origin: 'MDW', destination: 'ATL', food: true)
+FlightRoute.create(origin: 'LAX', destination: 'ATL', food: true)
+FlightRoute.create(origin: 'LGA', destination: 'DCA', food: true)
+FlightRoute.create(origin: 'MDW', destination: 'LGA', food: false)
+FlightRoute.create(origin: 'MDW', destination: 'DCA', food: true)
+FlightRoute.create(origin: 'LAX', destination: 'MDW', food: true)
+FlightRoute.create(origin: 'LAX', destination: 'LGA', food: true)
+FlightRoute.create(origin: 'LAX', destination: 'DCA', food: true)
+FlightRoute.create(origin: 'ATL', destination: 'LAX', food: false)
+FlightRoute.create(origin: 'ATL', destination: 'MDW', food: true)
+FlightRoute.create(origin: 'ATL', destination: 'LGA', food: true)
+FlightRoute.create(origin: 'ATL', destination: 'DCA', food: true)
