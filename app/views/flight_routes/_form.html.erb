@@ -1,7 +1,7 @@
 <%= form_for(flight_route) do |f| %>
   <% if flight_route.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(flight_route.errors.count, "error") %> prohibited this flight_route from being saved:</h2>
+      <h2><%= pluralize(flight_route.errors.count, "error") %> prohibited this flight route from being saved:</h2>
 
       <ul>
       <% flight_route.errors.full_messages.each do |message| %>

@@ -3,8 +3,8 @@ require 'rails_helper'
 RSpec.describe "flight_routes/edit", type: :view do
   before(:each) do
     @flight_route = assign(:flight_route, FlightRoute.create!(
-      :origin => "MyString",
-      :destination => "MyString",
+      :origin => "DCA",
+      :destination => "LAX",
       :food => false
     ))
   end

@@ -24,11 +24,11 @@ RSpec.describe FlightRoutesController, type: :controller do
   # FlightRoute. As you add validations to FlightRoute, be sure to
   # adjust the attributes here as well.
   let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
+    { origin: "DCA", destination: "LAX", food: true }
   }
 
   let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
+    { origin: "Q", destination: "LAX", food: true }
   }
 
   # This should return the minimal set of values that should be in the session
@@ -103,14 +103,14 @@ RSpec.describe FlightRoutesController, type: :controller do
   describe "PUT #update" do
     context "with valid params" do
       let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
+        { destination: "ORD" }
       }
 
       it "updates the requested flight_route" do
         flight_route = FlightRoute.create! valid_attributes
         put :update, params: {id: flight_route.to_param, flight_route: new_attributes}, session: valid_session
         flight_route.reload
-        skip("Add assertions for updated state")
+        expect(flight_route.destination).to eq "ORD"
       end
 
       it "assigns the requested flight_route as @flight_route" do
