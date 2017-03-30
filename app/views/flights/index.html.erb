@@ -1,0 +1,18 @@
+<h1>Flights for <%= @flight_route.origin %> to <%= @flight_route.destination %></h1>
+<ul>
+  <% @flights.each do |flight| %>
+    <li>
+      <%= flight.name %>
+
+      <% if flight.arrived_at %>
+        Arrived
+        <%= time_ago_in_words(flight.arrived_at) %>
+        ago
+      <% else %>
+        <%= link_to("Arrived!", mark_as_arrived_flight_route_flight_path(@flight_route, flight), method: :patch) %>
+      <% end %>
+
+
+    </li>
+  <% end %>
+</ul>

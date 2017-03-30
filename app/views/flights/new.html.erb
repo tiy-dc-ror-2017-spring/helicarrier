@@ -1,0 +1,36 @@
+<%= form_for [@flight_route, @flight] do |f| %>
+  <fieldset class="field">
+    <%= f.label "flight_number" %>
+    <%= f.text_field   "flight_number" %>
+  </fieldset>
+  <fieldset class="field">
+    <%= f.label "airline" %>
+    <%= f.text_field   "airline" %>
+  </fieldset>
+  <fieldset class="field">
+    <%= f.label "number_of_passengers" %>
+    <%= f.number_field  "number_of_passengers" %>
+  </fieldset>
+  <fieldset class="field">
+    <%= f.label "arrived_at" %>
+    <%= f.datetime_field "arrived_at" %>
+  </fieldset>
+  <fieldset class="field">
+    <%= f.label "stocked_at" %>
+    <%= f.datetime_field "stocked_at" %>
+  </fieldset>
+  <fieldset class="field">
+    <%= f.label "cleaned_at" %>
+    <%= f.datetime_field "cleaned_at" %>
+  </fieldset>
+  <fieldset class="field">
+    <%= f.label "gate" %>
+    <%= f.text_field   "gate" %>
+  </fieldset>
+  <fieldset class="field">
+    <%= f.label "flight_route_id" %>
+    <%= f.number_field  "flight_route_id" %>
+  </fieldset>
+
+  <%= f.submit %>
+<% end %>
